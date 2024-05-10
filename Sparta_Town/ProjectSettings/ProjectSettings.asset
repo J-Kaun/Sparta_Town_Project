@@ -716,12 +716,12 @@ PlayerSettings:
   hmiLogStartupTiming: 0
   hmiCpuConfiguration: 
   apiCompatibilityLevel: 6
-  activeInputHandler: 0
+  activeInputHandler: 2
   windowsGamepadBackendHint: 0
   cloudProjectId: 901caa70-067f-4f26-97eb-a23668091084
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
+  projectName: Sparta_Town
   organizationId: kangeun9727
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0

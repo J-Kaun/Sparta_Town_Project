@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class SelectCharacter : MonoBehaviour
 {
+    public Character character;
+    public GameObject SelectedCharacter;
+    public GameObject Canvas;
+    
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    public void OnClick()
     {
-        
+        DataManager.Instance.currentCharacter = character;
+        SelectedCharacter.SetActive(false);
+        Canvas.SetActive(true);
     }
 }

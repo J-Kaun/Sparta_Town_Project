@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace Cainos.PixelArtTopDown_Basic
 {
+    
     //let camera follow target
     public class CameraFollow : MonoBehaviour
     {
@@ -16,9 +17,7 @@ namespace Cainos.PixelArtTopDown_Basic
 
         private void Start()
         {
-            if (target == null) return;
-
-            offset = transform.position - target.position;
+            SetTargetByCharacter(GameManager.Instance.selectedCharacter);
         }
 
         private void Update()
@@ -27,6 +26,29 @@ namespace Cainos.PixelArtTopDown_Basic
 
             targetPos = target.position + offset;
             transform.position = Vector3.Lerp(transform.position, targetPos, lerpSpeed * Time.deltaTime);
+        }
+
+        public void SetTargetByCharacter(Character character)
+        {
+            switch (GameManager.Instance.selectedCharacter)
+            {
+                case Character.Knight:
+                    target = GameObject.Find("Knight_Pf").transform;
+                    break;
+                case Character.Elf:
+                    target = GameObject.Find("Elf_Pf").transform;
+                    break;
+                case Character.Dwarf:
+                    target = GameObject.Find("Dwarf_Pf").transform;
+                    break;
+                default:
+                    target = null;
+                    break;
+            }
+
+            if (target == null) return;
+
+            offset = transform.position - target.position;
         }
 
     }

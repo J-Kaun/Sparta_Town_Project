@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Player_Idle
+  m_Name: Elf_Idle
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,13 +21,13 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 21300000, guid: 975f3fc77e22ed846911b3ca5acedac4, type: 3}
+      value: {fileID: 21300000, guid: 2f4a5899f3b584c46bed5b522e1dd8e7, type: 3}
     - time: 0.16666667
-      value: {fileID: 21300000, guid: 03716f93baf5d434fa7dfc1c84cf0046, type: 3}
+      value: {fileID: 21300000, guid: 7702e826281cac242996b8d205f006d4, type: 3}
     - time: 0.41666666
-      value: {fileID: 21300000, guid: de2caa0fae60988408abf3d389afc628, type: 3}
+      value: {fileID: 21300000, guid: 1f4273e9ca81d914c8488c8d8d209075, type: 3}
     - time: 0.5833333
-      value: {fileID: 21300000, guid: 937282d13d422a24ab9f29ae4fee026b, type: 3}
+      value: {fileID: 21300000, guid: b2400d173c0e3224987a179e0806d183, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -50,10 +50,10 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 975f3fc77e22ed846911b3ca5acedac4, type: 3}
-    - {fileID: 21300000, guid: 03716f93baf5d434fa7dfc1c84cf0046, type: 3}
-    - {fileID: 21300000, guid: de2caa0fae60988408abf3d389afc628, type: 3}
-    - {fileID: 21300000, guid: 937282d13d422a24ab9f29ae4fee026b, type: 3}
+    - {fileID: 21300000, guid: 2f4a5899f3b584c46bed5b522e1dd8e7, type: 3}
+    - {fileID: 21300000, guid: 7702e826281cac242996b8d205f006d4, type: 3}
+    - {fileID: 21300000, guid: 1f4273e9ca81d914c8488c8d8d209075, type: 3}
+    - {fileID: 21300000, guid: b2400d173c0e3224987a179e0806d183, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

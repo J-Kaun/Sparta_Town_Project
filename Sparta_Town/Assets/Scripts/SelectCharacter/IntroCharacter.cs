@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class IntroCharacter : MonoBehaviour
 {
     public GameObject KnightPrefabs;
     public GameObject ElfPrefabs;
     public GameObject DwarfPrefabs;
+
+    public Text characterNameText;
     
     // Start is called before the first frame update
     void Start()
@@ -25,6 +28,9 @@ public class IntroCharacter : MonoBehaviour
                 DwarfPrefabs.SetActive(true);
                 break;
         }
+
+        string characterName = PlayerPrefs.GetString("CharacterName", "No Character Name");
+        characterNameText.text = "Selected Character Name : " + characterName;
     }
 
     // Update is called once per frame

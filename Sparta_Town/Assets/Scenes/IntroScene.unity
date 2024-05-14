@@ -3787,11 +3787,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13d0e62721e731a47916713e45e4ef50, type: 3}
+  m_Script: {fileID: 11500000, guid: 529aa52db1d27a84cbe5cb9e846ec0d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  lerpSpeed: 1000
+  cameraSpeed: 5
 --- !u!1 &612850732
 GameObject:
   m_ObjectHideFlags: 0
@@ -4927,9 +4926,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1172808456}
   - component: {fileID: 1172808457}
-  m_Layer: 0
+  - component: {fileID: 1172808458}
+  - component: {fileID: 1172808459}
+  m_Layer: 7
   m_Name: Player
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4968,7 +4969,68 @@ MonoBehaviour:
   KnightPrefabs: {fileID: 2114118267}
   ElfPrefabs: {fileID: 1529360614}
   DwarfPrefabs: {fileID: 1771536563}
-  characterNameText: {fileID: 0}
+  characterNameInputField: {fileID: 0}
+--- !u!114 &1172808458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1172808455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 961f3fc2a1ff01c43b4066c5519853a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Knight_Pf: {fileID: 1181251604}
+  Elf_Pf: {fileID: 192370017}
+  Dwarf_Pf: {fileID: 1878617791}
+  followSpeed: 5
+--- !u!61 &1172808459
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1172808455}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 1
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!4 &1181251604 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6835265658725521770, guid: e21ec40ef54b0414fbe7bb554cc57059,
@@ -5090,8 +5152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a686132c516cb40bc17f00ee47f24f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterNameInputField: {fileID: 9095008591850414895, guid: 23ad699e28341e4489e6730ccf7b48d7,
-    type: 3}
+  characterNameInputField: {fileID: 0}
 --- !u!1 &1276397051
 GameObject:
   m_ObjectHideFlags: 0
@@ -7616,6 +7677,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Knight_Pf
       objectReference: {fileID: 0}
+    - target: {fileID: 570176987163811565, guid: e21ec40ef54b0414fbe7bb554cc57059,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1659136780409545511, guid: e21ec40ef54b0414fbe7bb554cc57059,
+        type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 6835265658725521770, guid: e21ec40ef54b0414fbe7bb554cc57059,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7665,6 +7736,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9056481080503012057, guid: e21ec40ef54b0414fbe7bb554cc57059,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

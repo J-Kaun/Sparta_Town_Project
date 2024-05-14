@@ -4,7 +4,7 @@ public class CameraController : MonoBehaviour
 {
     public float cameraSpeed = 5.0f;
 
-    public GameObject player;
+    private Transform player;
 
     private void Update()
     {

@@ -9,8 +9,9 @@ public class IntroCharacter : MonoBehaviour
     public GameObject ElfPrefabs;
     public GameObject DwarfPrefabs;
 
-    public Text characterNameText;
-    
+    //public Text characterNameText;
+    public InputField characterNameInputField;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,13 +30,9 @@ public class IntroCharacter : MonoBehaviour
                 break;
         }
 
-        string characterName = PlayerPrefs.GetString("CharacterName", "No Character Name");
-        characterNameText.text = "Selected Character Name : " + characterName;
-    }
+        //string characterName = PlayerPrefs.GetString("CharacterName", "No Character Name");
+        //characterNameText.text = "Selected Character Name : " + characterName;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        characterNameInputField.text = PlayerPrefs.GetString("CharacterName");
     }
 }

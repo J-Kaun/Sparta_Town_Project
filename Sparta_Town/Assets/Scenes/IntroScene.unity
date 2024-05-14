@@ -3953,7 +3953,7 @@ GameObject:
   - component: {fileID: 782781073}
   - component: {fileID: 782781072}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: PlayerName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7680,7 +7680,7 @@ PrefabInstance:
     - target: {fileID: 570176987163811565, guid: e21ec40ef54b0414fbe7bb554cc57059,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1659136780409545511, guid: e21ec40ef54b0414fbe7bb554cc57059,
         type: 3}
